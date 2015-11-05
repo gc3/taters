@@ -2,4 +2,5 @@
 
 ## Directory structure
 
-- *d&d-5e*: 5th Edition Dungeons and Dragons tools
+- *site*: html for the collected tools
+- *scripts*: helper scripts for things like deployment to gh-pages, etc
