@@ -1,0 +1,49 @@
+<html>
+
+<head>
+<title>Taters! D&D 5e Crafting Calculator</title>
+
+<script type="text/javascript">
+// convert a gold cost and number of helpers into a number of days for crafting
+function calculateDaysToCraftPHB(gold_id, helpers_id, output_id) {
+  var gold_elm = document.getElementById(gold_id);
+  if (!gold_elm) {
+    return;
+  }
+  var gold_cost = parseInt(gold_elm.value);
+  if (!gold_cost) {
+    return;
+  }
+  var helpers = parseInt(document.getElementById(helpers_id).value);
+  if (!helpers) {
+    helpers = 1;
+  }
+  // days = total cost / (5gp progress per day * number of helpers)
+  document.getElementById(output_id).innerHTML =
+    "Magical Crafting = "    + (gold_cost / (25 * helpers)) + "<br\>" +
+    "Nonmagical Crafting = " + (gold_cost / (5  * helpers));
+}
+</script>
+
+</head>
+<body>
+
+  <h2> PHB Gold Cost to Crafting Days </h2>
+  <div style="margin:10px;">
+    <input type="text" id="gold_cost"  placeholder="Gold Cost">
+    <input type="text" id="gc_helpers" placeholder="Number of Crafters">
+    <button
+      type="button"
+      onclick="calculateDaysToCraftPHB('gold_cost', 'gc_helpers', 'gc_output')">
+        Convert to Days!
+    </button>
+    <div style="margin:2px;">
+      <div> Days to Craft: </div>
+      <div id="gc_output" style="margin-left:10px"> </div>
+    </div>
+  </div>
+
+  <h2>Taters! Crafting System Days to Craft </h2>
+
+</body>
+</html>
