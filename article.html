@@ -30,7 +30,7 @@
       // Get the markdown from the article file and then send it to the github
       // markdown rendering API to get HTML
       $.get(
-        '/taters/articles/' + article_name + '.md',
+        'articles/' + article_name + '.md',
         function (markdown) {
           $.ajax({
             type: "POST",
