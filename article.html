@@ -22,6 +22,7 @@
     $(document).ready(function () {
       // Grab the requested article name from the URL
       var article_name = getUrlParameter('name') || 'Example';
+      article_name = article_name.toLowerCase();
 
       // Make the page title and tagline match the article name
       document.title = 'Taters! Article: ' + article_name;
