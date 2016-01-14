@@ -30,7 +30,7 @@
       // Get the markdown from the article file and then send it to the github
       // markdown rendering API to get HTML
       $.get(
-        '/articles/' + article_name + '.md',
+        '/taters/articles/' + article_name + '.md',
         function (markdown) {
           $.ajax({
             type: "POST",
@@ -50,15 +50,15 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="/stylesheets/normalize.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="/taters/stylesheets/normalize.css" media="screen">
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" type="text/css" href="/stylesheets/stylesheet.css" media="screen">
-  <link rel="stylesheet" type="text/css" href="/stylesheets/github-light.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="/taters/stylesheets/stylesheet.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="/taters/stylesheets/github-light.css" media="screen">
 </head>
 
 <body>
 <section class="page-header">
-  <h1 class="project-name"><a style="color:white;" href="/">Taters!</a></h1>
+  <h1 class="project-name"><a style="color:white;" href="/taters">Taters!</a></h1>
   <h2 class="project-tagline" id="tagline">Taters! Article </h2>
 </section>
 
